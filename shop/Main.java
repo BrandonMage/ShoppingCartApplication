@@ -38,6 +38,7 @@ class ShoppingCart {
         double total = 0;
         System.out.println("Your cart contains: ");
         for (Product product : cart) {
+            System.out.println(product.name + " - K" + product.price);
             total += product.price;
         }
         System.out.println("Total price: " + total);
@@ -68,6 +69,7 @@ public class Main {
         ShoppingCart cart = new ShoppingCart();
         Scanner scanner = new Scanner(System.in);
 
+        //      Creating a while loop to keep the program running until the user exits
         while (true) {
             System.out.println("Choose a command: ");
             System.out.println("1. Add product to cart");
@@ -76,6 +78,36 @@ public class Main {
             System.out.println("4. Exit");
             int commandNumber = scanner.nextInt();
             scanner.nextLine();
+
+            //      Creating a switch statement to handle the user's input
+            switch (commandNumber) {
+                case 1:
+                    System.out.println("Enter the product number: ");
+                    int productNumber = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("Enter the quantity: ");
+                    int quantity = scanner.nextInt();
+                    scanner.nextLine();
+                    cart.addProduct(products[productNumber - 1], quantity);
+                    break;
+                case 2:
+                    System.out.println("Enter the product number: ");
+                    productNumber = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("Enter the quantity: ");
+                    quantity = scanner.nextInt();
+                    scanner.nextLine();
+                    cart.removeProduct(products[productNumber - 1], quantity);
+                    break;
+                case 3:
+                    cart.viewCart();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid command");
+            }
         }
 
     }
