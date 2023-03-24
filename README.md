@@ -7,8 +7,11 @@ To run the application, compile the Main.java file and run the resulting Main.cl
 The following commands are available:
 
 Add product to cart: Prompts the user to select a product and quantity, and adds the product to the cart.
+
 Remove product from cart: Prompts the user to select a product to remove and removes it from the cart.
+
 View cart: Displays the contents of the cart and the total cost of all products in the cart.
+
 Exit: Exits the application.
 
 # Product Class
