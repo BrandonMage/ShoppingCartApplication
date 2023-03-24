@@ -44,10 +44,11 @@ class ShoppingCart {
     }
 }
 
+
 public class Main {
     public static void main(String[] args) {
 
-        //Array of hard-coded products
+        //      Array of hard-coded products
         Product[] products = {
                 new Product("Mealie meal", 10.00),
                 new Product("Cooking oil", 20.00),
@@ -57,10 +58,24 @@ public class Main {
                 new Product("Juice", 60.00)
         };
 
-        //Prompt the user to select a product and show their prices
+        //      Prompt the user to select a product and show their prices
         System.out.println("Please select a product to add to your cart:");
         for (int i = 0; i < products.length; i++) {
             System.out.println((i+1) + ". " + products[i].name + " - K" + products[i].price);
+        }
+
+        //      Creating a constructor for the ShoppingCart class and a scanner to read user input
+        ShoppingCart cart = new ShoppingCart();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Choose a command: ");
+            System.out.println("1. Add product to cart");
+            System.out.println("2. Remove product from cart");
+            System.out.println("3. View cart");
+            System.out.println("4. Exit");
+            int commandNumber = scanner.nextInt();
+            scanner.nextLine();
         }
 
     }
