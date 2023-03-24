@@ -14,6 +14,36 @@ class Product {
     }
 }
 
+class ShoppingCart {
+    //    creating an array list to store the products
+    ArrayList<Product> cart =new ArrayList<Product>();
+
+    //    creating a method to add products to the cart
+    public void addProduct(Product product, int quantity) {
+        for (int i = 0; i < quantity; i++) {
+            cart.add(product);
+        }
+        cart.add(product);
+    }
+
+    //    creating a method to remove products from the cart
+    public void removeProduct(Product product, int quantity) {
+        for (int i = 0; i < quantity; i++) {
+            cart.remove(product);
+        }
+    }
+
+    //    creating a method to calculate the total price of the products in the cart
+    public void viewCart() {
+        double total = 0;
+        System.out.println("Your cart contains: ");
+        for (Product product : cart) {
+            total += product.price;
+        }
+        System.out.println("Total price: " + total);
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
 
