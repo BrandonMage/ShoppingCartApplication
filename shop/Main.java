@@ -15,7 +15,7 @@ class Product {
 }
 
 class ShoppingCart {
-    //    creating an array list to store the products
+   
     ArrayList<Product> cart =new ArrayList<Product>();
 
     //    creating a method to add products to the cart
