@@ -3,6 +3,18 @@ package shop;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+class Authentication {
+    //    creating a method to authenticate the user
+    public boolean authenticate(String username, String password) {
+        if (username.equals("admin") && password.equals("admin")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
 class Product {
     String name;
     double price;
@@ -48,6 +60,23 @@ class ShoppingCart {
 
 public class Main {
     public static void main(String[] args) {
+
+         //     Creating a constructor for the Authentication class and a scanner to read user input
+         Authentication auth = new Authentication();
+         Scanner scanner = new Scanner(System.in);
+ 
+         //      Prompting the user to enter their username and password
+         System.out.println("Enter your username: ");
+         String username = scanner.nextLine();
+         System.out.println("Enter your password: ");
+         String password = scanner.nextLine();
+ 
+         //      Checking if the user's credentials are correct
+         if (auth.authenticate(username, password)) {
+             System.out.println("Welcome " + username);
+         } else {
+             System.out.println("Invalid username or password");
+         }
 
         //      Array of hard-coded products
         Product[] products = {
