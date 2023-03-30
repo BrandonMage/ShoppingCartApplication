@@ -11,25 +11,6 @@ class Product {
     }
 }
 
-class ShoppingCart {
-   
-    ArrayList<Product> cart =new ArrayList<Product>();
-
-    //    creating a method to add products to the cart
-    public void addProduct(Product product, int quantity) {
-        for (int i = 0; i < quantity; i++) {
-            cart.add(product);
-        }
-        cart.add(product);
-    }
-
-    //    creating a method to remove products from the cart
-    public void removeProduct(Product product, int quantity) {
-        for (int i = 0; i < quantity; i++) {
-            cart.remove(product);
-        }
-    }
-
     //    creating a method to calculate the total price of the products in the cart
     public void viewCart() {
         double total = 0;
