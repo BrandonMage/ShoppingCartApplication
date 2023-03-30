@@ -1,4 +1,4 @@
-# ShoppingCartApplication
+# Shopping Cart Application
 This is a simple Java application that simulates a shopping cart. The application allows users to add and remove products from the cart and view the total cost of all products in the cart.
 # Getting Started
 To run the application, compile the shop.Main.java file and run the resulting shop.Main.class file. The application will prompt you to select a command from a list of options.

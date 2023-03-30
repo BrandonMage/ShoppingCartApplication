@@ -48,7 +48,6 @@ class ShoppingCart {
 
 public class Main {
     public static void main(String[] args) {
-
         //      Array of hard-coded products
         Product[] products = {
                 new Product("Mealie meal", 10.00),
