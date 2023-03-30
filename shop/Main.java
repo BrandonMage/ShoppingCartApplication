@@ -7,10 +7,7 @@ class Product {
     String name;
     double price;
 
-    //    initializing the name and price properties
-    public Product(String name, double price) {
-        this.name = name;
-        this.price = price;
+   
     }
 }
 
